@@ -14,14 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Storage.init({
-    company_id: Sequelize.INTEGER.UNSIGNED,
+    companyId: Sequelize.INTEGER.UNSIGNED,
     name: DataTypes.STRING,
     address: DataTypes.STRING,
-    created_at: {
-      type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW,
-    },
-    updated_at: DataTypes.DATE,
   }, {
     sequelize,
     modelName: 'Storage',

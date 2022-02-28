@@ -16,11 +16,6 @@ module.exports = (sequelize, DataTypes) => {
   Merk.init({
     name: DataTypes.STRING,
     customerservice: DataTypes.JSON,
-    created_at: {
-      type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW,
-    },
-    updated_at: DataTypes.DATE,
   }, {
     sequelize,
     modelName: 'Merk',

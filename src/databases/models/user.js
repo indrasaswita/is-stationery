@@ -14,15 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   User.init({
-    company_id: Sequelize.INTEGER.UNSIGNED,
+    companyId: Sequelize.INTEGER.UNSIGNED,
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    created_at: {
-      type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW,
-    },
-    updated_at: DataTypes.DATE,
   }, {
     sequelize,
     modelName: 'User',

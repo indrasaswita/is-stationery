@@ -14,23 +14,18 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Item.init({
-    merk_id: Sequelize.INTEGER.UNSIGNED,
-    rack_id: Sequelize.INTEGER.UNSIGNED,
+    merkId: Sequelize.INTEGER.UNSIGNED,
+    rackId: Sequelize.INTEGER.UNSIGNED,
     barcode: DataTypes.STRING,
     name: DataTypes.STRING,
     longname: DataTypes.STRING,
     sellprice: Sequelize.INTEGER.UNSIGNED,
-    sellprice_ids: DataTypes.JSON,
+    sellpriceIds: DataTypes.JSON,
     buyprice: Sequelize.INTEGER.UNSIGNED,
     is_availablestock: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
-    created_at: {
-      type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW,
-    },
-    updated_at: DataTypes.DATE,
   }, {
     sequelize,
     modelName: 'Item',

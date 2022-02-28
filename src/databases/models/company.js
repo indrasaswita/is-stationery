@@ -1,8 +1,9 @@
 'use strict';
 const {
-  Model
+  Model,
+  DataTypes,
 } = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize) => {
   class Company extends Model {
     /**
      * Helper method for defining associations.
@@ -15,15 +16,10 @@ module.exports = (sequelize, DataTypes) => {
   }
   Company.init({
     name: DataTypes.STRING,
-    useremployee_ids: DataTypes.JSON,
-    created_at: {
-      type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW,
-    },
-    updated_at: DataTypes.DATE,
+    useremployeeIds: DataTypes.JSON,
   }, {
     sequelize,
-    modelName: 'Company',
+    modelName: 'company',
   });
   return Company;
 };
